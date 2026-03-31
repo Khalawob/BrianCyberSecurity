@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <p class="site-subtitle">{{ site.description }}</p>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/week5-web-application-security/' | relative_url }}">Week 5</a>
+        <a href="{{ '/week7-owasp-juice-shop/' | relative_url }}">Week 7</a>
+        <a href="{{ '/week8-vulnerability-assessment-nmap/' | relative_url }}">Week 8</a>
+        <a href="{{ '/vulnerability-assessment-lab-ssh/' | relative_url }}">SSH</a>
+        <a href="{{ '/week9-vulnerability-scanning-mitigation/' | relative_url }}">Week 9</a>
+        <a href="{{ '/references/' | relative_url }}">References</a>
+      </nav>
+    </header>
+
+    <main class="content-card">
+      {% if page.page_heading %}
+      <div class="page-hero">
+        <h1>{{ page.page_heading }}</h1>
+      </div>
+      {% endif %}
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <p>GitHub Pages version of the coursework portfolio.</p>
+    </footer>
+  </div>
+</body>
+</html>

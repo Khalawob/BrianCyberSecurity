@@ -18,7 +18,12 @@ Figure 2 - Administartor Role
 
 ![Figure 2 - Administartor Role](week5-web-application-security/p004_Figure_2_-_Administartor_Role.png)
 
+
 Install vulnerable plugins and themes which are going to be scanned with WPscan.
+
+Figure 3 - Vulnerable Plugin [2]
+
+![Figure 3 - Vulnerable Plugin [2]](week5-web-application-security/003_Figure_4_-_Vulnerable_Theme_part1.png)
 
 Figure 4 - Vulnerable Theme
 

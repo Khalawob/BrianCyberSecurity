@@ -1,4 +1,10 @@
-# Week 5: Web Application Security
+---
+layout: default
+title: Week 5: Web Application Security
+page_heading: Week 5: Web Application Security
+---
+
+[← Back to homepage](/)
 
 This lab teaches how to setup a WordPress security assessment lab using Wpscan on a kali Linux virtual machine and a WordPress server virtual machine. WPScan is a security scanner specifically designed for WordPress which unlike general purpose vulnerability scanners such as Nessus or Nmap, is built specifically to enumerate WordPress installations, examine installed plugins and themes against its CVE database, and perform authentication attacks on specified targets. The main difference between WPscan and a general scanner is that a general scanner would identify that port 80 is open and Apache is running, but it would not identify that the Salon Booking System plugin version 10.9.3 has 26 vulnerabilities with actions on how to stop it. WPscan's API key integration connects live scans to a vulnerability database which is up to date and maintained by the security community [1].
 
@@ -18,7 +24,7 @@ Figure 4 - Vulnerable Theme
 
 ![Figure 4 - Vulnerable Theme](week5-web-application-security/003_Figure_4_-_Vulnerable_Theme_part1.png)
 
-1: Vulnerability Database Update and Plugin Enumeration
+## 1: Vulnerability Database Update and Plugin Enumeration
 
 Update WPscan Database
 
@@ -54,7 +60,7 @@ Figure 9 - Identified Plugin Vulnerabilities page 2
 
 ![Figure 9 - Identified Plugin Vulnerabilities page 2](week5-web-application-security/008_Figure_8_-_Identified_Plugin_Vulnerabilities.png)
 
-2: Full Scan for Plugins Themes and WordPress Version Detection
+## 2: Full Scan for Plugins Themes and WordPress Version Detection
 
 --Enumerate vp,vt,tt
 
@@ -88,13 +94,13 @@ Figure 15- WPscan theme vulnerabilities
 
 ![Figure 15- WPscan theme vulnerabilities](week5-web-application-security/013_Figure_14_-_WPscan_plugin_vulnerability_page_3_part1.png)
 
-WPScan Enumeration (VP, VT, AP, TT Scans) CIA Triad Impact
+### WPScan Enumeration (VP, VT, AP, TT Scans) CIA Triad Impact
 
 | Confidentiality - Breached | Integrity – Breached | Availability – High Risk |
 | --- | --- | --- |
 | The WPscan Enumeration reveals the usernames and the names and versions of the plugins and themes which give attackers a detailed guide of the targets system without any authentication | Knowing exact plugin versions allows an attacker to identify unpatched vulnerabilities such as SQL injection or privilege escalation, which could be used to modify database records or inject malicious content. | Certain vulnerabilities were identified like Cross-Site Request Forgery and unauthorised file upload, could be used to corrupt or delete site content and cause service disruption |
 
-BruteForcing Login Passwords
+## BruteForcing Login Passwords
 
 WPSCAN Brute force Login
 
@@ -114,13 +120,13 @@ Figure 18- Output of "wpscan --url http://192.168.123.65 --passwords /home/kali/
 
 ![Figure 18- Output of "wpscan --url http://192.168.123.65 --passwords /home/kali/Desktop/passwords.txt --usernames Brian"](week5-web-application-security/016_Figure_16-_wpscan_--url_http192.168.123.65_--passwords_homekaliDesktoppasswords.txt_--user.png)
 
-Brute Force Attack (Brian / admin) CIA Triad Impact
+### Brute Force Attack (Brian / admin) CIA Triad Impact
 
 | Confidentiality - Breached | Integrity – Breached | Availability – High Risk |
 | --- | --- | --- |
 | Gaining valid administrator credentials exposes all user data, email addresses and any private content managed through the WordPress dashboard | An authenticated administrator can install malicious plugins, modify page content, or alter site settings and directly compromise the trustworthiness of all data | An attacker with administrator access could deactivate all plugins, delete posts, pages or corrupt the database |
 
-4: Scanning with API Key for Detailed Vulnerabilities
+## 4: Scanning with API Key for Detailed Vulnerabilities
 
 Using a API key to find detailed vulnerabilities
 
@@ -146,13 +152,17 @@ Figure 21 -Throttle/Delay Output Themes
 
 Figure 22 - Plugin Vulnerabilities
 
-Security Implications
+## Security Implications
 
 The 26 plugin vulnerabilities and the Theme vulnerability that were found critically affect the security of the system as information about these vulnerabilities are on WPscan and guides on how to exploit them. These could be used to commit SQL injections to steal user data from the database and 1 of the vulnerabilities include a stored cross site scripting attack which users with administrator access could use to commit these attacks. The best way to solve this is to update the plugins and themes.
 
-Comparison Table between VP, VT, AP, TT
+## Comparison Table between VP, VT, AP, TT
 
 | VP | VT | AP | TT |
 | --- | --- | --- | --- |
 | Scans vulnerable Plugins only | Scans Vulnerable Themes only | Scans all plugins regardless of the presence of vulnerabilities | Scans all themes regardless of vulnerabilities |
 | Much quicker than scanning all plugins | Much quicker than scanning all themes | Slower than scanning vulnerable plugins only | Slower than scanning vulnerable themes. |
+
+---
+
+[← Back to homepage](/)

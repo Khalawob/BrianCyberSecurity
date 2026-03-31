@@ -1,4 +1,10 @@
-# References
+---
+layout: default
+title: References
+page_heading: References
+---
+
+[← Back to homepage](/)
 
 [1] WPScan, "WPScan User Documentation," WPScan CLI. [Online]. Available: https://github.com/wpscanteam/wpscan/wiki/WPScan-User-Documentation  [Accessed: Feb. 24, 2026].
 
@@ -55,3 +61,7 @@
 [26] OpenBSD, “sftp(1) - OpenBSD manual pages.” [Online]. Available: https://man.openbsd.org/sftp.1. [Accessed: Mar. 16, 2026].
 
 [27] Tenable, "Nessus Product Overview," Tenable Documentation, 2024. [Online]. Available: https://docs.tenable.com/nessus/Content/GettingStarted.htm [Accessed: Mar. 19, 2026].
+
+---
+
+[← Back to homepage](/)

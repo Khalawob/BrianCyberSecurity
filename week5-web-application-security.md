@@ -152,8 +152,10 @@ Excluding specific scans is used for focusing on components that are likely to h
 The throttle on the other hand creates a delay between each http request sent by the WPscan. This is used to avoid detection because the delay makes the scan appear seem more like regular user traffic and is less likely to get blocked. A benefit is that it reduces server strain
 
 Figure 20 - Throttle and Excluding Scan Types
+![Figure 20 - Throttle and Excluding Scan Types](week5-web-application-security/p016_Figure_20_-_Throttle_and_Excluding_Scan_Types.png)
 
 Figure 21 -Throttle/Delay Output Themes
+![Figure 21 - Throttle/Delay Output Themes](week5-web-application-security/p016_Figure_21_-ThrottleDelay_Output_Themes.png)
 
 Figure 22 - Plugin Vulnerabilities
 

@@ -188,3 +188,24 @@ h2, h3, h4{
   margin-top:1.2em;
   margin-bottom:.45em;
 }
+.report-figure{
+  margin: 8px auto 14px;
+  text-align: center;
+}
+
+.report-figure img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 4px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(18,36,73,.06);
+}
+
+.report-figure figcaption{
+  font-style: italic;
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin: 0;
+}

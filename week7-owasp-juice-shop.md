@@ -10,25 +10,25 @@ OWASP Juice shop is a web application designed to be insecure to mimic an actual
 
 ## Exercise 1:
 
-Figure 32 - Find Carefully Hidden Scoreboard
-
 ![Figure 32 - Find Carefully Hidden Scoreboard](week7-owasp-juice-shop/p021_Figure_32_-_Find_Carefully_Hidden_Scoreboard.png)
+
+*Figure 32 - Find Carefully Hidden Scoreboard*
 
 ### Step 1: Go on inspect, click on the sources tab, select main.js and type in “path” one of the results should be the score-board
 
-Figure 33- Path Found for Scoreboard
-
 ![Figure 33- Path Found for Scoreboard](week7-owasp-juice-shop/p022_Figure_33-_Path_Found_for_Scoreboard.jpeg)
+
+*Figure 33- Path Found for Scoreboard*
 
 ### Output: When you add “/score-board” to the url, you will be taken to the scoreboard and juice shop will tell you that the challenge has been completed.
 
-Figure 34 - URL Contains "Score-board"
-
 ![Figure 34 - URL Contains "Score-board"](week7-owasp-juice-shop/p022_Figure_34_-_URL_Contains_Score-board.png)
 
-Figure 35 - Challenge Completed
+*Figure 34 - URL Contains "Score-board"*
 
 ![Figure 35 - Challenge Completed](week7-owasp-juice-shop/p022_Figure_35_-_Challenge_Completed.png)
+
+*Figure 35 - Challenge Completed*
 
 ## Challenge 1 CIA Triad Impact
 
@@ -38,47 +38,45 @@ Figure 35 - Challenge Completed
 
 ## Challenge 2: Create New Admin User
 
-Figure 36 - Create New Admin User Challenge (3 Star)
-
 ![Figure 36 - Create New Admin User Challenge (3 Star)](week7-owasp-juice-shop/p023_Figure_36_-_Create_New_Admin_User_Challenge_3_Star.png)
 
-![Figure 36 - Create New Admin User Challenge (3 Star)](week7-owasp-juice-shop/005_Figure_31_-_Create_New_Admin_User_Challenge_3_Star.png)
+*Figure 36 - Create New Admin User Challenge (3 Star)*
 
 ### Step 1: Create new user on the Register page
 
-Figure 37 - Registering an New User
-
 ![Figure 37 - Registering an New User](week7-owasp-juice-shop/p023_Figure_37_-_Registering_an_New_User.png)
+
+*Figure 37 - Registering an New User*
 
 ### Step 2: Ensure Burpsuite got the Request for login
 
-Figure 38 - Burpsuite Got the details we Entered
-
 ![Figure 38 - Burpsuite Got the details we Entered](week7-owasp-juice-shop/p024_Figure_38_-_Burpsuite_Got_the_details_we_Entered.png)
+
+*Figure 38 - Burpsuite Got the details we Entered*
 
 ### Step 3:
 
 Copy request to repeater, change the email and add a field called “role”. In that role enter admin. The “role” field is used to determine the access level of a user.
 
-Figure 39 - "Role: admin" has been added
-
 ![Figure 39 - "Role: admin" has been added](week7-owasp-juice-shop/p025_Figure_39_-_Role_admin_has_been_added.png)
+
+*Figure 39 - "Role: admin" has been added*
 
 ### Step 4: Once “Repeat” is pressed, your new account should be updated to admin because we changed the role from “customer” to “Admin”
 
-Figure 40 - New User has the role "Admin
-
 ![Figure 40 - New User has the role "Admin](week7-owasp-juice-shop/p025_Figure_40_-_New_User_has_the_role_Admin.png)
+
+*Figure 40 - New User has the role "Admin*
 
 ## Proof of completion
 
-Figure 41 - Challenge 2 Completed
-
 ![Figure 41 - Challenge 2 Completed](week7-owasp-juice-shop/p026_Figure_41_-_Challenge_2_Completed.png)
 
-Figure 42 - New Admin User "brianadmin@roehampton.com" has been created
+*Figure 41 - Challenge 2 Completed*
 
 ![Figure 42 - New Admin User "brianadmin@roehampton.com" has been created](week7-owasp-juice-shop/p026_Figure_42_-_New_Admin_User_brianadminroehampton.com_has_been_created.jpeg)
+
+*Figure 42 - New Admin User "brianadmin@roehampton.com" has been created*
 
 ## Challenge 2 CIA Triad Impact
 
@@ -88,19 +86,19 @@ Figure 42 - New Admin User "brianadmin@roehampton.com" has been created
 
 ## Challenge 3: Find Admin Page
 
-Figure 43 - Challenge 3: Find Admin Page
-
 ![Figure 43 - Challenge 3: Find Admin Page](week7-owasp-juice-shop/p027_Figure_43_-_Challenge_3_Find_Admin_Page.png)
+
+*Figure 43 - Challenge 3: Find Admin Page*
 
 ### Step 1: Go on inspect, click on the sources tab, select main.js and type in “path” one of the results should be “Administration”
 
-Figure 44 - Administration Path Found
-
 ![Figure 44 - Administration Path Found](week7-owasp-juice-shop/p027_Figure_44_-_Administration_Path_Found.png)
 
-Figure 45 - Acess Admin Challenge Completed
+*Figure 44 - Administration Path Found*
 
 ![Figure 45 - Acess Admin Challenge Completed](week7-owasp-juice-shop/p027_Figure_45_-_Acess_Admin_Challenge_Completed.jpeg)
+
+*Figure 45 - Acess Admin Challenge Completed*
 
 ## Challenge 3 CIA Triad Impact
 
@@ -110,33 +108,33 @@ Figure 45 - Acess Admin Challenge Completed
 
 ## Challenge 4:
 
-Figure 46 - Challenge 4: View Another Users Basket
-
 ![Figure 46 - Challenge 4: View Another Users Basket](week7-owasp-juice-shop/p028_Figure_46_-_Challenge_4_View_Another_Users_Basket.png)
+
+*Figure 46 - Challenge 4: View Another Users Basket*
 
 ### Step 1: Login to an account, go to the basket page and open up session tab with the inspect tab open.
 
-Figure 47 - Inspect Tab open with the Basket ID
-
 ![Figure 47 - Inspect Tab open with the Basket ID](week7-owasp-juice-shop/p028_Figure_47_-_Inspect_Tab_open_with_the_Basket_ID.png)
+
+*Figure 47 - Inspect Tab open with the Basket ID*
 
 ### Step 2: Change the Basket ID(bid) to another number like 1 or 2. After that reload the page.
 
-Figure 48 - Basket ID Changed to "2"
-
 ![Figure 48 - Basket ID Changed to "2"](week7-owasp-juice-shop/p028_Figure_48_-_Basket_ID_Changed_to_2.png)
+
+*Figure 48 - Basket ID Changed to "2"*
 
 ### Output (This shows another customers purchase details which consists of 2 orders of raspberry juice. The limitation of this is that it does not give more details such as the user who ordered it which if it did then a hacker could have made phishing page and send an email to the user explaining that something is wrong with their order.)
 
-Figure 49 - Challenge completed and someone else’s basket is displayed
-
 ![Figure 49 - Challenge completed and someone else’s basket is displayed](week7-owasp-juice-shop/p029_Figure_49_-_Challenge_completed_and_someone_elses_basket_is_displayed.png)
+
+*Figure 49 - Challenge completed and someone else’s basket is displayed*
 
 ### Output (This shows another customer’s purchase detail with BasketID 5)
 
-Figure 117 - BasketID 5 purchase details from another customer account
-
 ![Figure 117 - BasketID 5 purchase details from another customer account](week7-owasp-juice-shop/p029_Figure_117_-_BasketID_5_purchase_details_from_another_customer_account.png)
+
+*Figure 117 - BasketID 5 purchase details from another customer account*
 
 ## Challenge 4 CIA Triad Impact
 
@@ -146,35 +144,35 @@ Figure 117 - BasketID 5 purchase details from another customer account
 
 ## Challenge 5:
 
-Figure 50 - Challenge 5: Login As Admin
-
 ![Figure 50 - Challenge 5: Login As Admin](week7-owasp-juice-shop/p030_Figure_50_-_Challenge_5_Login_As_Admin.png)
+
+*Figure 50 - Challenge 5: Login As Admin*
 
 ### Step 1:
 
 Attempt to login as a admin by guessing the email and password once
 
-Figure 51 - Unsuccessful log in using "admin user"
-
 ![Figure 51 - Unsuccessful log in using "admin user"](week7-owasp-juice-shop/p031_Figure_51_-_Unsuccessful_log_in_using_admin_user.png)
+
+*Figure 51 - Unsuccessful log in using "admin user"*
 
 ### Step 2: Ensure the login request is received by burpsuite and send it to repeater.
 
-Figure 52 - Username and password recorded
-
 ![Figure 52 - Username and password recorded](week7-owasp-juice-shop/p031_Figure_52_-_Username_and_password_recorded.png)
+
+*Figure 52 - Username and password recorded*
 
 ### Step 3: Commit a SQL injection in the email section “adminuser” or 1=1 –"
 
-Figure 53- Sql Injection in the Repeater
-
 ![Figure 53- Sql Injection in the Repeater](week7-owasp-juice-shop/p032_Figure_53-_Sql_Injection_in_the_Repeater.png)
+
+*Figure 53- Sql Injection in the Repeater*
 
 ### Output of the sql Injection with a generated authentication token, basket id and email  showing that we have been granted access and Proof of Completion.
 
-Figure 54 - Successful Authentication and Token Recieved
-
 ![Figure 54 - Successful Authentication and Token Recieved](week7-owasp-juice-shop/p032_Figure_54_-_Successful_Authentication_and_Token_Recieved.png)
+
+*Figure 54 - Successful Authentication and Token Recieved*
 
 ## Challenge 5 CIA Triad Impact
 
@@ -184,29 +182,29 @@ Figure 54 - Successful Authentication and Token Recieved
 
 ## Challenge 6:
 
-Figure 55 - Challenge 6: Provoke an Error that is not Handled Gracefully
-
 ![Figure 55 - Challenge 6: Provoke an Error that is not Handled Gracefully](week7-owasp-juice-shop/p033_Figure_55_-_Challenge_6_Provoke_an_Error_that_is_not_Handled_Gracefully.png)
+
+*Figure 55 - Challenge 6: Provoke an Error that is not Handled Gracefully*
 
 ### Step 1:
 
 As a logged in user that you have created, Try and go to the profile page by clicking the profile icon
 
-Figure 56 - Profile Icon
-
 ![Figure 56 - Profile Icon](week7-owasp-juice-shop/p033_Figure_56_-_Profile_Icon.png)
+
+*Figure 56 - Profile Icon*
 
 ### Step 2: This page should come up showing that the request was not handled gracefully thus completing the challenge
 
-Figure 57 - Unhandled error and it shows the Programming language being used
-
 ![Figure 57 - Unhandled error and it shows the Programming language being used](week7-owasp-juice-shop/p033_Figure_57_-_Unhandled_error_and_it_shows_the_Programming_language_being_used.png)
+
+*Figure 57 - Unhandled error and it shows the Programming language being used*
 
 ## Proof of completion
 
-Figure 58 - Challenge Completed
-
 ![Figure 58 - Challenge Completed](week7-owasp-juice-shop/p034_Figure_58_-_Challenge_Completed.png)
+
+*Figure 58 - Challenge Completed*
 
 ## Challenge 6 CIA Triad Impact
 
@@ -216,31 +214,31 @@ Figure 58 - Challenge Completed
 
 ## Challenge 7:
 
-Figure 59 - Challenge 7: Login Bender
-
 ![Figure 59 - Challenge 7: Login Bender](week7-owasp-juice-shop/p034_Figure_59_-_Challenge_7_Login_Bender.png)
+
+*Figure 59 - Challenge 7: Login Bender*
 
 ### Step 1: Go to the product page and look through the reviews of all products to find a review left by benders email address.
 
-Figure 60 - A review left by bender on the Banana Juice product
-
 ![Figure 60 - A review left by bender on the Banana Juice product](week7-owasp-juice-shop/p034_Figure_60_-_A_review_left_by_bender_on_the_Banana_Juice_product.png)
+
+*Figure 60 - A review left by bender on the Banana Juice product*
 
 ### Step 2: Commit SQL Injection in the email section of the login page by typing “- -". You can put any value in the password section.
 
-Figure 61 - Sql Injection
-
 ![Figure 61 - Sql Injection](week7-owasp-juice-shop/p035_Figure_61_-_Sql_Injection.jpeg)
+
+*Figure 61 - Sql Injection*
 
 ## Proof of completion
 
-Figure 62 - Challenge Completed
-
 ![Figure 62 - Challenge Completed](week7-owasp-juice-shop/p035_Figure_62_-_Challenge_Completed.jpeg)
 
-Figure 63 - Logged in as Bender
+*Figure 62 - Challenge Completed*
 
 ![Figure 63 - Logged in as Bender](week7-owasp-juice-shop/p036_Figure_63_-_Logged_in_as_Bender.jpeg)
+
+*Figure 63 - Logged in as Bender*
 
 ## Challenge 7 CIA Triad Impact
 
@@ -250,49 +248,49 @@ Figure 63 - Logged in as Bender
 
 ## Challenge 8:
 
-Figure 64 - Challenge 8: (Change benders password to slurmCl4ssic)
-
 ![Figure 64 - Challenge 8: (Change benders password to slurmCl4ssic)](week7-owasp-juice-shop/p036_Figure_64_-_Challenge_8_Change_benders_password_to_slurmCl4ssic.png)
+
+*Figure 64 - Challenge 8: (Change benders password to slurmCl4ssic)*
 
 ### Step 1 Login as bender using a sql injection
 
-Figure 65 - Logged In as Bender
-
 ![Figure 65 - Logged In as Bender](week7-owasp-juice-shop/p036_Figure_65_-_Logged_In_as_Bender.jpeg)
+
+*Figure 65 - Logged In as Bender*
 
 ### Step 2: Attempt to change password so you can get the http history in burp suite
 
-Figure 66 - Random Password Entered
-
 ![Figure 66 - Random Password Entered](week7-owasp-juice-shop/p037_Figure_66_-_Random_Password_Entered.png)
 
-Figure 67 - Login Attempt Caught
+*Figure 66 - Random Password Entered*
 
 ![Figure 67 - Login Attempt Caught](week7-owasp-juice-shop/p038_Figure_67_-_Login_Attempt_Caught.png)
 
-### Step 3: copy the request into the repeater so it can be used again.
+*Figure 67 - Login Attempt Caught*
 
-Figure 68 - Login attempt is in the Repeater
+### Step 3: copy the request into the repeater so it can be used again.
 
 ![Figure 68 - Login attempt is in the Repeater](week7-owasp-juice-shop/p038_Figure_68_-_Login_attempt_is_in_the_Repeater.png)
 
-### Step 4: remove the field that says “current” which contains the password you entered and send the request
+*Figure 68 - Login attempt is in the Repeater*
 
-Figure 69 - "Current" Field has been removed
+### Step 4: remove the field that says “current” which contains the password you entered and send the request
 
 ![Figure 69 - "Current" Field has been removed](week7-owasp-juice-shop/p039_Figure_69_-_Current_Field_has_been_removed.png)
 
-## Proof of completion
+*Figure 69 - "Current" Field has been removed*
 
-Figure 70 - Challenge Completed
+## Proof of completion
 
 ![Figure 70 - Challenge Completed](week7-owasp-juice-shop/p039_Figure_70_-_Challenge_Completed.jpeg)
 
+*Figure 70 - Challenge Completed*
+
 Proof password Changed
 
-Figure 71 - Save Password Box shows Updated Password
-
 ![Figure 71 - Save Password Box shows Updated Password](week7-owasp-juice-shop/p040_Figure_71_-_Save_Password_Box_shows_Updated_Password.jpeg)
+
+*Figure 71 - Save Password Box shows Updated Password*
 
 ## Challenge 8 CIA Triad Impact
 
@@ -302,39 +300,39 @@ Figure 71 - Save Password Box shows Updated Password
 
 ## Challenge 9:
 
-Figure 72 – Challenge 9: DOM XSS
-
 ![Figure 72 – Challenge 9: DOM XSS](week7-owasp-juice-shop/p040_Figure_72_-_Challenge_9_DOM_XSS.png)
+
+*Figure 72 – Challenge 9: DOM XSS*
 
 ### Step 1: Copy the “iframe” code
 
-Figure 73 - Iframe Code Copied
-
 ![Figure 73 - Iframe Code Copied](week7-owasp-juice-shop/p040_Figure_73_-_Iframe_Code_Copied.png)
+
+*Figure 73 - Iframe Code Copied*
 
 ### Step 2: Paste the code into the search bar and then press enter
 
-Figure 74 - Iframe Code Pasted in Search Bar
-
 ![Figure 74 - Iframe Code Pasted in Search Bar](week7-owasp-juice-shop/p040_Figure_74_-_Iframe_Code_Pasted_in_Search_Bar.png)
+
+*Figure 74 - Iframe Code Pasted in Search Bar*
 
 ### Step 3: After you press enter a box saying xss should come up. This tells you the attack was successful
 
-Figure 75 - XSS Attack Output
-
 ![Figure 75 - XSS Attack Output](week7-owasp-juice-shop/p041_Figure_75_-_XSS_Attack_Output.png)
+
+*Figure 75 - XSS Attack Output*
 
 Notice how the search result is a large empty box
 
-Figure 118 - Empty search result box shown after submitting the payload
-
 ![Figure 118 - Empty search result box shown after submitting the payload](week7-owasp-juice-shop/p041_Figure_118_-_Empty_search_result_box_shown_after_submitting_the_payload.jpeg)
+
+*Figure 118 - Empty search result box shown after submitting the payload*
 
 ## Proof of completion
 
-Figure 76 - Challenge Completed
-
 ![Figure 76 - Challenge Completed](week7-owasp-juice-shop/p042_Figure_76_-_Challenge_Completed.png)
+
+*Figure 76 - Challenge Completed*
 
 ## Challenge 9 CIA Triad Impact
 
@@ -344,55 +342,55 @@ Figure 76 - Challenge Completed
 
 ## Challenge 10:
 
-Figure 77 - Challenge 10: Steal User Credentials
-
 ![Figure 77 - Challenge 10: Steal User Credentials](week7-owasp-juice-shop/p042_Figure_77_-_Challenge_10_Steal_User_Credentials.png)
+
+*Figure 77 - Challenge 10: Steal User Credentials*
 
 ### Step 1: In the search bar, do a union select of the user’s table. The page should give information saying that we don’t have the right number of columns
 
-Figure 78- Union Select SQL Injection
-
 ![Figure 78- Union Select SQL Injection](week7-owasp-juice-shop/p042_Figure_78-_Union_Select_SQL_Injection.png)
 
-Figure 79- Page Showing the number of columns is incoreect
+*Figure 78- Union Select SQL Injection*
 
 ![Figure 79- Page Showing the number of columns is incoreect](week7-owasp-juice-shop/p043_Figure_79-_Page_Showing_the_number_of_columns_is_incoreect.jpeg)
 
-### Step 2: Find the correct number of columns by increasing the number of columns you are searching for
+*Figure 79- Page Showing the number of columns is incoreect*
 
-Figure 80- Selecting 1 column
+### Step 2: Find the correct number of columns by increasing the number of columns you are searching for
 
 ![Figure 80- Selecting 1 column](week7-owasp-juice-shop/p043_Figure_80-_Selecting_1_column.png)
 
-Figure 81- Error Message Changed
+*Figure 80- Selecting 1 column*
 
 ![Figure 81- Error Message Changed](week7-owasp-juice-shop/p043_Figure_81-_Error_Message_Changed.jpeg)
 
-### Step 3: Once you find the right number of columns, a page page containing all the details of a user should appear.
+*Figure 81- Error Message Changed*
 
-Figure 82- Selecting 9 Columns is the correct amount of Columns
+### Step 3: Once you find the right number of columns, a page page containing all the details of a user should appear.
 
 ![Figure 82- Selecting 9 Columns is the correct amount of Columns](week7-owasp-juice-shop/p043_Figure_82-_Selecting_9_Columns_is_the_correct_amount_of_Columns.png)
 
-Figure 83 - Page showing user information
+*Figure 82- Selecting 9 Columns is the correct amount of Columns*
 
 ![Figure 83 - Page showing user information](week7-owasp-juice-shop/p044_Figure_83_-_Page_showing_user_information.png)
 
-### Step 4: type a SQL query in the URL that targets id,password and email. This will return a list of user id’s, their emails and passwords
+*Figure 83 - Page showing user information*
 
-Figure 84- SQL Injection Targeting Email, ID and Password
+### Step 4: type a SQL query in the URL that targets id,password and email. This will return a list of user id’s, their emails and passwords
 
 ![Figure 84- SQL Injection Targeting Email, ID and Password](week7-owasp-juice-shop/p044_Figure_84-_SQL_Injection_Targeting_Email_ID_and_Password.png)
 
-Figure 85 - Output of the SQL injection
+*Figure 84- SQL Injection Targeting Email, ID and Password*
 
 ![Figure 85 - Output of the SQL injection](week7-owasp-juice-shop/p045_Figure_85_-_Output_of_the_SQL_injection.png)
 
+*Figure 85 - Output of the SQL injection*
+
 ## Proof of completion
 
-Figure 86 - Challenge Completed
-
 ![Figure 86 - Challenge Completed](week7-owasp-juice-shop/p045_Figure_86_-_Challenge_Completed.png)
+
+*Figure 86 - Challenge Completed*
 
 ## Challenge 10 CIA Triad Impact
 
@@ -402,9 +400,9 @@ Figure 86 - Challenge Completed
 
 List of all completed challenges
 
-Figure 87 – Completed Challenges
-
 ![Figure 87 – Completed Challenges](week8-vulnerability-assessment-nmap/p046_Figure_87_-_Completed_Challenges.png)
+
+*Figure 87 – Completed Challenges*
 
 ## Reflection
 

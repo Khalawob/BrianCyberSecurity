@@ -161,3 +161,30 @@ blockquote{
   .site-header,.content-card{padding:18px}
   .page-hero h1{font-size:1.55rem}
 }
+img{
+  display:block;
+  max-width:100%;
+  height:auto;
+  margin:8px auto 6px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  box-shadow:0 6px 16px rgba(18,36,73,.06);
+}
+
+p{
+  margin:0 0 12px;
+}
+
+.image-caption,
+figure figcaption{
+  text-align:center;
+  font-style:italic;
+  font-size:.92rem;
+  color:var(--muted);
+  margin:0 0 14px;
+}
+
+h2, h3, h4{
+  margin-top:1.2em;
+  margin-bottom:.45em;
+}

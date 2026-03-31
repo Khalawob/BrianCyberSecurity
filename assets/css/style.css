@@ -121,7 +121,6 @@ a{
   color:var(--accent);
 }
 
-/* Default images */
 img{
   display:block;
   max-width:100%;
@@ -132,7 +131,6 @@ img{
   box-shadow:0 6px 16px rgba(18,36,73,.06);
 }
 
-/* Figure wrapper for report screenshots */
 .report-figure{
   margin:24px auto 32px;
   text-align:center;
@@ -155,7 +153,6 @@ img{
   margin:0;
 }
 
-/* Optional caption class if not using <figure><figcaption> */
 .image-caption,
 figure figcaption{
   text-align:center;

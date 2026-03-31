@@ -10,43 +10,43 @@ This section will show one of the exploits found using Wpscan be exploited to sh
 
 Figure 23 - Vulnerability Description [3]
 
-![Figure 23 - Vulnerability Description [3]](week5-further-learning-exploting-vulnerabilities/001_Figure_18_-_Vulnerability_Description_3.png)
+![Figure 23 - Vulnerability Description [3]](week5-further-learning-exploting-vulnerabilities/p018_Figure_23_-_Vulnerability_Description_3.jpeg)
 
 ### Step 1: Go to the services page of the salon plugin
 
 Figure 24 - Services Section Of the Plugin
 
-![Figure 24 - Services Section Of the Plugin](week5-further-learning-exploting-vulnerabilities/002_Figure_19_-_Services_Section_Of_the_Plugin.png)
+![Figure 24 - Services Section Of the Plugin](week5-further-learning-exploting-vulnerabilities/p018_Figure_24_-_Services_Section_Of_the_Plugin.png)
 
 ### Step 2: go to the “Title” field
 
 Figure 25 - Title Field
 
-![Figure 25 - Title Field](week5-further-learning-exploting-vulnerabilities/003_Figure_20_-_Title_Field.png)
+![Figure 25 - Title Field](week5-further-learning-exploting-vulnerabilities/p018_Figure_25_-_Title_Field.png)
 
 ### Step 3: Change the title from beard trim to &lt;img src=x onerror=alert(1)&gt;
 
 Figure 26- Beard Trim is the Title
 
-![Figure 26- Beard Trim is the Title](week5-further-learning-exploting-vulnerabilities/004_Figure_21-_Beard_Trim_is_the_Title.png)
+![Figure 26- Beard Trim is the Title](week5-further-learning-exploting-vulnerabilities/p018_Figure_26-_Beard_Trim_is_the_Title.png)
 
 Title has been changed to &lt;img src=x onerror=alert(1)&gt;
 
 Figure 27 - Title Changed to Code
 
-![Figure 27 - Title Changed to Code](week5-further-learning-exploting-vulnerabilities/005_Figure_22_-_Title_Changed_to_Code.png)
+![Figure 27 - Title Changed to Code](week5-further-learning-exploting-vulnerabilities/p019_Figure_27_-_Title_Changed_to_Code.png)
 
 ### Step 4 go to the assistant’s page and select one of the assistants to edit
 
 Figure 28- Assistant section showing 2 Assistants
 
-![Figure 28- Assistant section showing 2 Assistants](week5-further-learning-exploting-vulnerabilities/006_Figure_23-_Assistant_section_showing_2_Assistants.png)
+![Figure 28- Assistant section showing 2 Assistants](week5-further-learning-exploting-vulnerabilities/p019_Figure_28-_Assistant_section_showing_2_Assistants.png)
 
 Click on limit reservations to the following services
 
 Figure 29 - Limiting Reservations for Mario
 
-![Figure 29 - Limiting Reservations for Mario](week5-further-learning-exploting-vulnerabilities/007_Figure_24_-_Limiting_Reservations_for_Mario.png)
+![Figure 29 - Limiting Reservations for Mario](week5-further-learning-exploting-vulnerabilities/p019_Figure_29_-_Limiting_Reservations_for_Mario.png)
 
 Output of the XSS Attack:
 
@@ -54,11 +54,11 @@ The data has entered the web application through an untrusted source through a w
 
 Figure 30 - Output of the XSS Attack
 
-![Figure 30 - Output of the XSS Attack](week5-further-learning-exploting-vulnerabilities/008_Figure_25_-_Output_of_the_XSS_Attack.png)
+![Figure 30 - Output of the XSS Attack](week5-further-learning-exploting-vulnerabilities/p020_Figure_30_-_Output_of_the_XSS_Attack.png)
 
 Figure 31 - Image Icon
 
-![Figure 31 - Image Icon](week5-further-learning-exploting-vulnerabilities/009_Figure_26_-_Image_Icon.png)
+![Figure 31 - Image Icon](week5-further-learning-exploting-vulnerabilities/p020_Figure_31_-_Image_Icon.png)
 
 ### Stored XSS Exploit (Salon Booking Plugin) CIA Triad Impact
 

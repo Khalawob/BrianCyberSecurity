@@ -11,21 +11,17 @@ This lab teaches how to setup a WordPress security assessment lab using Wpscan o
 Make a new user with the administrator role so that they can install plugins and themes. We are going to set a weak password found from the Wikipedia weak password list [4].
 
 ![Figure 1 - Create New User called Brian with password as Admin](week5-web-application-security/p003_Figure_1_-_Create_New_User_called_Brian_with_password_as_Admin.png)
-
 *Figure 1 - Create New User called Brian with password as Admin*
 
 ![Figure 2 - Administartor Role](week5-web-application-security/p004_Figure_2_-_Administartor_Role.png)
-
 *Figure 2 - Administartor Role*
 
 Install vulnerable plugins and themes which are going to be scanned with WPscan.
 
 ![Figure 3 - Vulnerable Plugin [2]](week5-web-application-security/003_Figure_4_-_Vulnerable_Theme_part1.png)
-
 *Figure 3 - Vulnerable Plugin [2]*
 
 ![Figure 4 - Vulnerable Theme](week5-web-application-security/p004_Figure_4_-_Vulnerable_Theme.jpeg)
-
 *Figure 4 - Vulnerable Theme*
 
 ## 1: Vulnerability Database Update and Plugin Enumeration
@@ -35,7 +31,6 @@ Update WPscan Database
 This is used so the Vulnerability database contains the latest information on vulnerabilities found in plugins
 
 ![Figure 5 - WPscan Updated](week5-web-application-security/p005_Figure_5_-_WPscan_Updated.jpeg)
-
 *Figure 5 - WPscan Updated*
 
 Connect the WPscan API key to wpscan
@@ -43,7 +38,6 @@ Connect the WPscan API key to wpscan
 This is used to access the database of vulnerabilities and check if there is any vulnerabilities in the plugins or themes
 
 ![Figure 6 - API Key](week5-web-application-security/p005_Figure_6_-_API_Key.jpeg)
-
 *Figure 6 - API Key*
 
 WPScan WordPress URL enumerate -p
@@ -51,17 +45,14 @@ WPScan WordPress URL enumerate -p
 WPScan checks its database of vulnerabilities for the latest vulnerabilities and identifies plugins that have been installed.
 
 ![Figure 7 - Output Page 1](week5-web-application-security/p006_Figure_7_-_Output_Page_1.png)
-
 *Figure 7 - Output Page 1*
 
 This image shows the plugin installed and the number of vulnerabilities identified along with fixes.
 
 ![Figure 8 - Identified Plugin Vulnerabilities](week5-web-application-security/p007_Figure_8_-_Identified_Plugin_Vulnerabilities.jpeg)
-
 *Figure 8 - Identified Plugin Vulnerabilities*
 
 ![Figure 9 - Identified Plugin Vulnerabilities page 2](week5-web-application-security/p007_Figure_9_-_Identified_Plugin_Vulnerabilities_page_2.jpeg)
-
 *Figure 9 - Identified Plugin Vulnerabilities page 2*
 
 ## 2: Full Scan for Plugins Themes and WordPress Version Detection
@@ -71,31 +62,26 @@ This image shows the plugin installed and the number of vulnerabilities identifi
 The command in figure 10 performs a comprehensive scan that targets Vulnerable plugins using “VP”, Vulnerable Themes are targeted with “VT” while “TT” lists all the themes and attempts to find associated vulnerabilities.
 
 ![Figure 10 - wpscan --url http://192.168.123.65 --enumerate vp,vt,tt](week5-web-application-security/p008_Figure_10_-_wpscan_--url_http192.168.123.65_--enumerate_vpvttt.png)
-
 *Figure 10 - wpscan --url http://192.168.123.65 --enumerate vp,vt,tt*
 
 The theme being used has been identified along with 1 vulnerability related to reflected cross site scripting
 
 ![Figure 11 - wpscan --url http://192.168.123.65 --enumerate vp,vt,tt (Identified Theme and associated Vulnerabilities)](week5-web-application-security/p009_Figure_11_-_wpscan_--url_http192.168.123.65_--enumerate_vpvttt_Identified_Theme_.png)
-
 *Figure 11 - wpscan --url http://192.168.123.65 --enumerate vp,vt,tt (Identified Theme and associated Vulnerabilities)*
 
 This Image also contains the plugins in use along with 26 vulnerabilities such as reflected cross-site scripting and sensitive data disclosure.
 
 ![Figure 12 - wpscan --url http://192.168.123.65 --enumerate vp,vt,tt (Plugins and Vulnerabilities)](week5-web-application-security/p009_Figure_12_-_wpscan_--url_http192.168.123.65_--enumerate_vpvttt_Plugins_and_Vulne.png)
-
 *Figure 12 - wpscan --url http://192.168.123.65 --enumerate vp,vt,tt (Plugins and Vulnerabilities)*
 
 More plugin Vulnerabilities
 
 ![Figure 14 - WPscan plugin vulnerability page 3](week5-web-application-security/p010_Figure_14_-_WPscan_plugin_vulnerability_page_3.jpeg)
-
 *Figure 14 - WPscan plugin vulnerability page 3*
 
 This page contains the theme WordPress is using and the reflected cross site scripting vulnerability it found.
 
 ![Figure 15- WPscan theme vulnerabilities](week5-web-application-security/p010_Figure_15-_WPscan_theme_vulnerabilities.png)
-
 *Figure 15- WPscan theme vulnerabilities*
 
 ### WPScan Enumeration (VP, VT, AP, TT Scans) CIA Triad Impact
@@ -111,17 +97,14 @@ WPSCAN Brute force Login
 The command in Figure 16 attempts to brute force login to a account called “Brian” on WordPress using the list of passwords contained in passwords.txt.
 
 ![Figure 16- wpscan --url http://192.168.123.65 --passwords /home/kali/Desktop/passwords.txt --usernames Brian](week5-web-application-security/p011_Figure_16-_wpscan_--url_http192.168.123.65_--passwords_homekaliDesktoppasswords..jpeg)
-
 *Figure 16- wpscan --url http://192.168.123.65 --passwords /home/kali/Desktop/passwords.txt --usernames Brian*
 
 ![Figure 17 - Password List that is being used](week5-web-application-security/p012_Figure_17_-_Password_List_that_is_being_used.png)
-
 *Figure 17 - Password List that is being used*
 
 The output shows that a valid combination of credentials was found saying “Username: Brian” and “Password: admin”
 
 ![Figure 18- Output of "wpscan --url http://192.168.123.65 --passwords /home/kali/Desktop/passwords.txt --usernames Brian"](week5-web-application-security/p013_Figure_18-_Output_of_wpscan_--url_http192.168.123.65_--passwords_homekaliDesktop.png)
-
 *Figure 18- Output of "wpscan --url http://192.168.123.65 --passwords /home/kali/Desktop/passwords.txt --usernames Brian"*
 
 ### Brute Force Attack (Brian / admin) CIA Triad Impact
@@ -137,11 +120,9 @@ Using a API key to find detailed vulnerabilities
 The AP option enumerates all plugins and checks each one in the WPscan vulnerability database
 
 ![Figure 19 - API Token Enumerate AP](week5-web-application-security/p014_Figure_19_-_API_Token_Enumerate_AP.png)
-
 *Figure 19 - API Token Enumerate AP*
 
 ![Figure 18 - WPScan API-assisted vulnerability enumeration output](week5-web-application-security/p015_Figure_18_-_WPScan_API-assisted_vulnerability_enumeration_output.png)
-
 *Figure 18 - WPScan API-assisted vulnerability enumeration output*
 
 Excluding specific scans and setting a delay
@@ -151,12 +132,10 @@ Excluding specific scans is used for focusing on components that are likely to h
 The throttle on the other hand creates a delay between each http request sent by the WPscan. This is used to avoid detection because the delay makes the scan appear seem more like regular user traffic and is less likely to get blocked. A benefit is that it reduces server strain
 
 ![Figure 20 - Throttle and Excluding Scan Types](week5-web-application-security/p016_Figure_20_-_Throttle_and_Excluding_Scan_Types.png)
-
 *Figure 20 - Throttle and Excluding Scan Types*
 
 ![Figure 21 - Throttle/Delay Output Themes](week5-web-application-security/p016_Figure_21_-ThrottleDelay_Output_Themes.png)
-
-*Figure 21 -Throttle/Delay Output Themes*
+*Figure 21 - Throttle/Delay Output Themes*
 
 Figure 22 - Plugin Vulnerabilities
 
